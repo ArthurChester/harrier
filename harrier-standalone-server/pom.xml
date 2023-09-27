@@ -20,10 +20,6 @@
 			<artifactId>harrier-server</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>cn.spdb.harrier</groupId>
-			<artifactId>harrier-alarm</artifactId>
-		</dependency>
 	</dependencies>
 
 	<build>
@@ -31,6 +27,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
+				<version>${maven-jar-plugin.version}</version>
 				<configuration>
 					<archive>
 						<!-- 生成的jar中，不要包含pom.xml和pom.properties这两个文件 -->

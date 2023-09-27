@@ -6,6 +6,9 @@ import java.util.concurrent.ConcurrentHashMap;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+import cn.spdb.harrier.server.worker.rpc.WorkerRpc;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -29,7 +32,8 @@ public class MasterRpc {
 	
 	private ConcurrentHashMap<String, MasterTransportServerInterfasce> clientMasterList = new ConcurrentHashMap<String, MasterTransportServerInterfasce>();
 
-	
+	private Logger logger= LoggerFactory.getLogger(MasterRpc.class.getSimpleName());
+
 	@Autowired
 	public MasterRpc(MasterConfig masterConfig) {
 		NettyServerConfig serverConfig = new NettyServerConfig();
@@ -40,7 +44,9 @@ public class MasterRpc {
 
 	@PostConstruct
 	public void start() {
+		logger.info("master rpc start");
 		nettyServer.start();
+		logger.info("master rpc start");
 	}
 
 	@PreDestroy

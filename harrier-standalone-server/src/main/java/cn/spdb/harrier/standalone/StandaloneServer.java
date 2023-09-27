@@ -1,5 +1,7 @@
 package cn.spdb.harrier.standalone;
 
+import cn.spdb.harrier.api.ApiServer;
+import cn.spdb.harrier.server.ServerApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
@@ -12,7 +14,6 @@ import cn.spdb.harrier.server.worker.UdsWorkerServer;
 public class StandaloneServer {
 
 	public static void main(String[] args) {
-		new SpringApplicationBuilder(AlarmServer.class, MonitorApplication.class, UdsWorkerServer.class,
-				UdsMasterServer.class).run(args);
+		new SpringApplicationBuilder(ApiServer.class,AlarmServer.class,UdsWorkerServer.class, UdsMasterServer.class).run(args);
 	}
 }

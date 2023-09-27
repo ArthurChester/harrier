@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="harrier-server" />
+        <module name="harrier-dao" />
+        <module name="harrier-common" />
+        <module name="harrier-ui" />
+        <module name="harrier-rpc" />
+        <module name="harrier-alarm" />
+        <module name="harrier-api" />
+        <module name="harrier-standalone-server" />
+        <module name="harrier-service" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

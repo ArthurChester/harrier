@@ -37,8 +37,8 @@ public class WebConfiguration implements WebMvcConfigurer {
 	@Bean
 	public CorsFilter corsFilter() {
 		CorsConfiguration config = new CorsConfiguration();
-//		config.addAllowedOrigin("*");
-		config.addAllowedOriginPattern("*");
+		config.addAllowedOrigin("*");
+//		config.addAllowedOriginPattern("*");
 		config.addAllowedMethod("*");
 		config.addAllowedHeader("*");
 		config.setAllowCredentials(true);

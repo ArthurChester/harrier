@@ -39,6 +39,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
+				<version>${maven-jar-plugin.version}</version>
 				<configuration>
 					<archive>
 						<!-- 生成的jar中，不要包含pom.xml和pom.properties这两个文件 -->
@@ -49,7 +50,7 @@
 							<!-- 外部依赖jar包的最终位置 -->
 							<classpathPrefix>./lib/</classpathPrefix>
 							<!-- 项目启动类 -->
-							<mainClass>cn.spdb.harrier.server.Application
+							<mainClass>cn.spdb.harrier.server.ServerApplication
 							</mainClass>
 						</manifest>
 						<!-- 指定配置文件目录，这样jar运行时会去找到同目录下的resources文件夹下查找 -->

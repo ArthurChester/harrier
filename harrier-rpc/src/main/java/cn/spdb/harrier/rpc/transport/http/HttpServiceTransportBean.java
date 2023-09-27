@@ -9,9 +9,6 @@ import javax.servlet.http.HttpServlet;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.mock.web.MockHttpServletRequest;
-import org.springframework.mock.web.MockHttpServletResponse;
-
 import cn.spdb.harrier.common.utils.ClassUtils;
 import cn.spdb.harrier.common.utils.PropertyUtils;
 import cn.spdb.harrier.common.utils.StringUtils;
@@ -27,6 +24,8 @@ import io.netty.handler.codec.http.HttpResponseStatus;
 import io.netty.handler.codec.http.HttpVersion;
 import io.netty.handler.codec.http.QueryStringDecoder;
 import io.netty.util.CharsetUtil;
+import org.springframework.mock.web.MockHttpServletRequest;
+import org.springframework.mock.web.MockHttpServletResponse;
 
 public class HttpServiceTransportBean {
 

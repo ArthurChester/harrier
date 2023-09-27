@@ -3,6 +3,7 @@ package cn.spdb.harrier.api;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
 
@@ -11,7 +12,7 @@ import cn.spdb.harrier.common.cache.HarrierCacheImpl;
 
 @SpringBootApplication(scanBasePackages = { "cn.spdb.harrier.api", "cn.spdb.harrier.service", "cn.spdb.harrier.dao" })
 @ServletComponentScan
-public class ApiServer {
+public class ApiServer extends SpringBootServletInitializer {
 
 	@Primary
 	@Bean("api-cache")
